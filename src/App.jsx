@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar';
 import Catalogo from './components/Catalogo';
+import Producto from './components/Producto';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       </header>
       <main class='container'>
         <Catalogo/>
+        <Producto/>
       </main>
     </>  
   );
