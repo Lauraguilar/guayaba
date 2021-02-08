@@ -10,10 +10,11 @@ import libro9 from '../assets/tapasLibros/Libro9.jpg';
 import libro10 from '../assets/tapasLibros/Libro10.jpg';
 
 
-import '../estilos/Catalogo.css';
+import '../estilos/Destacados.css';
 import {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 
-function Catalogo () {
+function Destacados () {
     const libros = [{
                         id:1,
                         titulo:'Algo es posible',
@@ -118,35 +119,32 @@ function Catalogo () {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     } , []);
 
-    const [cant, setCant] = useState(1);
+
     const [items, setItems] = useState([]);
 
     return (
-        <section id='compras' class='row'>
+        <section id='recomendados' className='container'>
+            <h3 className='row'>Productos Destacados</h3>
+            <div className='row justify-content-center'>
             {
                 items.length ?                
                     items.map((item, index) => (
-                        <div className="card col-3" key={index}>
+                        <div className="card col-4 col-sm-3" key={index}>
                             <div className="card-body">
-                                <h5 class="card-title">{item.titulo}</h5>                        
-                                <p class="card-text">{item.autor}</p>
-                                <img src={item.editorial} class="card-img-top" alt="TapaLibro"/>
-                                <div class="row">
-                                    <button disabled={cant === 1 ? 'disabled' : null } onClick={() => setCant(cant -1 )} class="col-2 btn btn-outline-primary">-</button>
-                                    <input class="col-8" type="text" value={cant} readOnly/>
-                                    <button onClick={() => setCant(cant + 1)} class="col-2 btn btn-outline-primary">+</button>
-                                </div>
-                                <h6 class='card-subtitle mb-2 text-muted'>{item.valor}</h6>
-                                <button class="btn btn-primary">Agregar Carrito</button>
+                                <h5 className="card-title">{item.titulo}</h5>                        
+                                <p className="card-text">{item.autor}</p>
+                                <img src={item.editorial} className="card-img-top" alt="TapaLibro"/>
+                                <h6 className='card-subtitle mb-2 text-muted'>{item.valor}</h6>
+                                <Link className="btn btn-primary" to="/Producto">Detalle</Link>
                             </div>
                         </div>
                     ))
                 :
                 <p>Cargando items...</p>
             }
-
+            </div>
         </section>
     )
 }
 
-export default Catalogo;
+export default Destacados;

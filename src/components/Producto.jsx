@@ -9,7 +9,7 @@ const Producto = () => {
             resolve({
                 id: 1, 
                 nombre: "Producto de prueba",
-                foto: "http://placehold.it/350x400",
+                foto: "http://placehold.it/400x5esta00",
                 descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
                 precio: 400
             })
@@ -23,16 +23,16 @@ const Producto = () => {
     }, []);
 
     return (
-        <>
+        <section className='container'>
             {
                 producto ? 
                 <DetalleProducto item={producto}/>
                 : <p>Cargando producto...</p>
             }
-            <section>
-                <h2>Productos recomendados</h2>
-            </section>
-        </>
+            <article>
+                <h2>Productos relacionados</h2>
+            </article>
+        </section>
     )
 }
 

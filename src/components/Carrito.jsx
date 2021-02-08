@@ -1,8 +1,12 @@
 import {GrCart} from 'react-icons/gr';
+import '../estilos/Carrito.css'
 
-function Carrito () {
+const Carrito = (accion) => {
     return (
-        <GrCart/>   
+        <div className="Carrito" onClick={accion}>
+            <GrCart/>   
+            <span>0</span>
+        </div>
     )
 }
 

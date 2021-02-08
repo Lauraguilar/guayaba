@@ -1,0 +1,41 @@
+.nosotras {
+    margin-top: 130px;
+}
+
+.nos {
+    background-color: white;
+    margin: 20px;
+    border-radius: 1ch;
+    padding: 10px;
+    text-align: center;
+}
+
+.nombres { 
+    font-weight: bolder;
+}
+
+.boxFoto {
+    border-radius: 55rem;
+    box-shadow: 0px 10px 30px #372b4c6e;
+    width: 250px;
+    height: 250px;
+    margin: 20px 0px;
+}
+
+.borde {
+    width: 70%;
+    border-style: solid;
+    border-width: 0,3rem;
+    padding: 15px;
+    border-radius: 1ch;
+    box-shadow: 0px 10px 30px #372b4c6e;
+}
+
+.separador {
+    margin-top: 20px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+}
