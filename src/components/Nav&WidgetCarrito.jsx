@@ -12,7 +12,7 @@ const NavWidgetCarrito = () => {
     return (
         <>
             <NavBar action={abrirWidget} />
-            <WidgetCarrito show={mostrarWidget} action={abrirWidget} />
+            <WidgetCarrito mostrar={mostrarWidget} action={abrirWidget} />
         </>
     )
 }

@@ -1,10 +1,11 @@
 import '../estilos/WidgetCarrito.css';
 
-const WidgetCarrito = (mostrar, accion) => {
-
+const WidgetCarrito = ({mostrar, action}) => {
     return (
         <div className={`widgetCarrito ${mostrar ? 'open' : 'close'}`}>
-            <button onClick={accion}>Cerrar widget</button>
+            <div className='contenido'>
+                <button onClick={action}>Cerrar widget</button>
+            </div>
         </div>
     )
 }

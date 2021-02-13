@@ -19,8 +19,8 @@ const Footer = () => {
                     </nav>
                 </div>
             </div>
-            <div class="row" id="autor">
-                <div class="col d-flex justify-content-center">
+            <div className="row" id="autor">
+                <div className="col d-flex justify-content-center">
                     <p>Maria Laura Aguilar - 2020</p>
                 </div>
             </div>
