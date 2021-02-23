@@ -12,7 +12,7 @@ const ListaProductos = ({productos, categoria}) => {
                                 <h5 className="card-title">{item.data.titulo}</h5>                        
                                 <p className="card-text">{item.data.autor}</p>
                                 <img src={item.data.foto} className="card-img-top" alt="TapaLibro"/>
-                                <h6 className='card-subtitle mb-2 text-muted'>{item.data.valor}</h6>
+                                <h6 className='card-subtitle mb-2 text-muted'>${item.data.valor}</h6>
                                 <Link className="btn btn-primary" to={`/${categoria}/${item.id}`}>Ver detalle</Link>
                             </div>
                         </div>

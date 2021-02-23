@@ -32,7 +32,7 @@ const Categoria = () => {
                 productos.length ? 
                 <ListaProductos productos={productos} categoria={categoria}/>
                 :
-                <p>No hay libros en esta categoria</p>
+                <p>Cargando productos...</p>
             }
         </section>
     )

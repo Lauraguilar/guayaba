@@ -1,63 +1,63 @@
 [{
     "id":1,
-    "titulo":"Don Quijote de la mancha",
-    "autor":"Miguel de Cervantes",
+    "titulo":"LA ODISEA",
+    "autor":"Homero",
     "editorial": "libro1",
     "valor":754.54,
     "cantidad":22
 },
 {
     "id":2,
-    "titulo":"Orgullo y Prejuicio",
-    "autor":"Jane Austen",
+    "titulo":"LA ILÍADA",
+    "autor":"Homero",
     "editorial": "libro2",
     "valor":1982.04,
     "cantidad":23
 },
 {
     "id":3,
-    "titulo":"Aura",
-    "autor":"Carlos Fuentes",
+    "titulo":"La Divina Comedia",
+    "autor":"Dante Alighieri",
     "editorial": "libro3",
     "valor":885.41,
     "cantidad":43
 },
 {
     "id":4,
-    "titulo": "Cumbres Borrascosas",
-    "autor": "Emily Brontë",
+    "titulo": "Madame Bovary",
+    "autor": "Gustave Flaubert",
     "editorial": "libro4",
     "valor":1659.91,
     "cantidad":33
 },
 {
     "id":5,
-    "titulo":"Pedro Páramo",
-    "autor":"Juan Rulfo",
+    "titulo":"Hamlet",
+    "autor":"William Shakespeare",
     "editorial": "libro5",
     "valor":1883.71,
     "cantidad":55
 },
 {
     "id":6,
-    "titulo": "El coronel no tiene quien le escriba",
-    "autor": "Gabriel García Márquez",
+    "titulo": "Edipo Rey",
+    "autor": "Sófocles",
     "editorial": "libro6",
     "valor":1396.86,
     "cantidad":73
 },
 {
     "id":7,
-    "titulo":"Frankenstein o el moderno Prometeo",
-    "autor":"Mary Shelley",
+    "titulo":"Las mil y una noches",
+    "autor":"Anónimo",
     "editorial":"libro7",
     "valor":1462.7,
     "cantidad":75
 },
 {
     "id":8,
-    "titulo": "Jane Eyre",
-    "autor": "Charlotte Brontë",
+    "titulo": "Cien años de soledad",
+    "autor": "Gabriel García Márquez",
     "editorial": "libro8",
     "valor":671.33,
     "cantidad":77
