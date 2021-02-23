@@ -5,15 +5,18 @@ import '../estilos/DetalleProducto.css';
 const DetalleProducto = ({item}) => {
     const [cant, setCant] = useState(1);
 
+    console.log(item)
+
     return (
         <article className='row'>
-            <h1>{item.nombre}</h1>
+            <h1>{item.data.titulo}</h1>
+            <h5>{item.data.autor}</h5>
             <div className='col-md'>
-                <img src={item.foto} alt=""/>
+                <img src={item.data.foto} alt=""/>
             </div>
             <div className='col-md'>
-                <p>{item.descripcion}</p>
-                <p>${item.precio}</p>
+                <p>{item.data.cantidad}</p>
+                <p>${item.data.valor}</p>
                 <div className="row">
                     <button disabled={cant === 1 ? 'disabled' : null } onClick={() => setCant(cant -1 )} className="col-1 btn btn-outline-primary">-</button>
                     <input className="col" type="text" value={cant} readOnly/>

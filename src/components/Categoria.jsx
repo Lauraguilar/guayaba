@@ -1,33 +1,39 @@
-import {Link} from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import '../estilos/Categoria.css';
+import ListaProductos from './ListaProductos';
+import {useState, useEffect} from 'react';
+import {getFirestore} from '../db';
+
+
 
 
 const Categoria = () => {
     const {categoria} = useParams();
+    const [productos, setProductos] = useState([]);
+    const db = getFirestore();
 
-    const queCategoria = (cat) => {
-        switch (cat) {
-            case 'psicologia': <Link to='/psicologia'/>
-                break;
-            case 'novelas': <Link to='/novelas'/>
-                break;
-            case 'clasicos': <Link to='/clasicos'/>
-                break;
-            case 'contacto': <Link to='/contacto'/>
-                break;
-            default: <Link to='*'/>
-                break;
+    useEffect(() => {
+        if(categoria) {
+            db.collection('productos').where('categoria', '==', categoria).get()
+            .then(response => {
+                let arr = [];
+                response.forEach(doc => {
+                    arr.push({id: doc.id, data: doc.data()})
+                })
+                setProductos(arr);
+            })
         }
-    }
+    }, [categoria])
 
     return (
-        <section className='categoria'>
-
-                <h2>Estas en {categoria}</h2>
-                {
-                    queCategoria(categoria)
-                }
+        <section className='categoria container'>
+            <h2>{categoria.split('-').join(' ')}</h2>
+            {
+                productos.length ? 
+                <ListaProductos productos={productos} categoria={categoria}/>
+                :
+                <p>No hay libros en esta categoria</p>
+            }
         </section>
     )
 }

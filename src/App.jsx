@@ -2,7 +2,7 @@ import NavWidgetCarrito from './components/Nav&WidgetCarrito';
 import Destacados from './components/Destacados';
 import Categoria from './components/Categoria';
 import Contacto from './components/Contacto';
-import DetalleProducto from './components/DetalleProducto';
+import Detalle from './components/Detalle';
 import Error404 from "./components/Error404";
 import Footer from "./components/Footer";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
@@ -26,14 +26,14 @@ function App() {
           <Route exact path="/">
             <Destacados/>
           </Route>
-          <Route exact path="/contacto">
+          <Route path="/contacto">
             <Contacto/>
           </Route>
           <Route exact path="/:categoria">
             <Categoria/>
           </Route>
           <Route exact path="/:categoria/:id">
-            <DetalleProducto/>
+            <Detalle/>
           </Route>
           <Route path="*">
             <Error404 />
