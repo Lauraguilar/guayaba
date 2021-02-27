@@ -1,0 +1,13 @@
+.card {
+    box-shadow: 0px 10px 20px #372b4c6e;
+}
+
+.card .card-body img {
+    max-width: 150px;
+    max-height: 1800px; 
+}
+
+.card .card-body h6 {
+    margin-top: 5px;
+}
+

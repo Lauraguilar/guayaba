@@ -8,8 +8,10 @@ const Carrito = ({action}) => {
 
     return (
         <div className="Carrito" onClick={action}>
-            <GrCart/>   
-            <span>{data.cantidad}</span>
+            <button className='btn btn-link'>
+                <GrCart className='tamanio'/>   
+                <span>{data.cantidad}</span>
+            </button>
         </div>
     )
 }

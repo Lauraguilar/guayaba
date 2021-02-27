@@ -8,6 +8,9 @@ import Footer from "./components/Footer";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Store} from './store';
 import {useState} from 'react';
+import Autora from "./components/Autora";
+import VistaCarrito from "./components/VistaCarrito";
+import Checkout from "./components/Checkout";
 
 
 function App() {
@@ -26,6 +29,12 @@ function App() {
           <Route exact path="/">
             <Destacados/>
           </Route>
+          <Route path="/carrito">
+            <VistaCarrito/>
+          </Route>
+          <Route path="/checkout">
+            <Checkout/>
+          </Route>
           <Route path="/contacto">
             <Contacto/>
           </Route>
@@ -40,6 +49,7 @@ function App() {
           </Route>
         </Switch>
         <Footer/>
+        <Autora/>
       </BrowserRouter>
     </Store.Provider>
   );

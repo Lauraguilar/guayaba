@@ -1,28 +1,19 @@
-section {
-    padding: 20px 0px;
+.footer {
+    margin:  50px;
 }
 
-section nav a {
-    margin: 15px;
-    border-radius: 55rem;
+.footer a {
+    border-radius: 50rem;
     border-style: solid;
     box-shadow: 0px 10px 10px #372b4c6e;
     color: rgba(0,0,0,.5);
+    font-size: 2.0rem;
+    padding: 15px;
+    margin: 10px;
 }
 
-section nav a {
-    font-size: 1.3rem;
-    font-weight: lighter;
-    color: rgba(0,0,0,.5);
-    margin: 10px 5px;
+.footer a:hover{
+    background-color: rgba(26, 25, 25, 0.1);
 }
 
-section nav a:hover {
-    color: rgba(0,0,0,.7);
-    font-size: 2.5rem;
-}
 
-#autor {
-    margin-top: 80px;
-    font-weight: lighter;
-}

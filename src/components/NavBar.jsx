@@ -38,7 +38,7 @@ const NavBar = ({action}) => {
                   )
                 }
                 <li className="nav-item">
-                  <Carrito className="nav-link" action={action}/>  
+                  <Carrito className="btn btn-link" action={action}/>  
                 </li>
               </ul>
             </div>

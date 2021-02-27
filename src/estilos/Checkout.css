@@ -1,0 +1,11 @@
+.checkout {
+    margin-top: 150px;
+}
+
+.checkout form input {
+    max-width: 500px;
+}
+
+.checkout form .form-group {
+    margin-top: 20px;
+}
