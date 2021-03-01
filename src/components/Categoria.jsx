@@ -10,6 +10,7 @@ import {getFirestore} from '../db';
 const Categoria = () => {
     const {categoria} = useParams();
     const [productos, setProductos] = useState([]);
+    const [cat, setCat] = useState('');
     const db = getFirestore();
 
     useEffect(() => {
@@ -22,12 +23,15 @@ const Categoria = () => {
                 })
                 setProductos(arr);
             })
+
+            const nombre = categoria.split('-').join(' ')
+            setCat(nombre.charAt(0).toUpperCase() + nombre.slice(1))
         }
     }, [categoria])
 
     return (
         <section className='categoria container'>
-            <h2>{categoria.split('-').join(' ')}</h2>
+            <h2>{cat}</h2>
             {
                 productos.length ? 
                 <ListaProductos productos={productos} categoria={categoria}/>

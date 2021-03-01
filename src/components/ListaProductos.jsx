@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import '../estilos/ListaProductos.css'
+import '../estilos/ListaProductos.css';
 
 const ListaProductos = ({productos, categoria}) => {
 
@@ -7,8 +7,8 @@ const ListaProductos = ({productos, categoria}) => {
         <section className='container'>
             <div className='row justify-content-center'>
             {               
-                    productos.map(item => (
-                        <div className="card col-4 col-sm-3" key={item.id}>
+                    productos.map((item, index) => (
+                        <div className="card col-4 col-sm-3" key={index}>
                             <div className="card-body">
                                 <h5 className="card-title">{item.data.titulo}</h5>                        
                                 <p className="card-text">{item.data.autor}</p>

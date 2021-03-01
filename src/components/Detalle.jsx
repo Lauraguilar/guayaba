@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import {getFirestore} from '../db';
+import {Link} from 'react-router-dom';
 import DetalleProducto from './DetalleProducto';
 import '../estilos/Detalle.css'
 
@@ -19,13 +20,22 @@ const Detalle = () => {
         .catch(e => console.log(e));
     }, []);
 
-    console.log(producto);
-
     return (
         <>
             {
                 producto ?
                 <div className="container detalle">
+                    <nav>
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item">
+                                <Link to={`/${producto.data.categoria}`}>/{producto.data.categoria.split('-').join(' ')}</Link>
+                            </li>
+                            <li className="breadcrumb-item active">
+                                {producto.data.titulo}
+                            </li>
+                        </ol>
+                    </nav>
+
                     <DetalleProducto item={producto} />
                 </div> : 
                 <p>Cargando producto...</p>

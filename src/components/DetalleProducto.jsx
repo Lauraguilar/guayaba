@@ -33,6 +33,10 @@ const DetalleProducto = ({item}) => {
                     <button onClick={() => setCant(cant + 1)} className="col-1 btn btn-outline-primary">+</button>
                     <button onClick={onAdd} className="agregarCarrito col btn btn-primary">Agregar al carrito</button>
                 </div>
+                <div className='row descripcion'>
+                    <h6>Sinopsis</h6>
+                    <p>{item.data.descripcion}</p>
+                </div>
             </div>
         </article>
     )
