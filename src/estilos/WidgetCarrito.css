@@ -25,3 +25,15 @@
   .contenido h4 {
     margin-bottom: 15px;
   }  
+
+  .contenido ul {
+    list-style-type: none;
+    padding: none;
+    margin-block-start: 0em;
+    padding-inline-start: 10px;
+  }
+
+  .contenido .ver {
+    margin-top: 20px;
+    padding: 15px;
+  }
